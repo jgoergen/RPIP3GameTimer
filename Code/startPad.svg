@@ -1,0 +1,21 @@
+<svg 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    class="pressButton" 
+    width="200" 
+    height="200">
+    
+    <defs>
+        <radialGradient id="circleGradient" gradientUnits="userSpaceOnUse" cx="50%" cy="50%" r="59%">
+            <stop offset="0" style="stop-color: rgb(229, 255, 211);"></stop>
+            <stop offset="1" style="stop-color: rgba(113, 184, 63, 1)"></stop>
+        </radialGradient>
+    </defs>
+        
+    <circle class="inactive"
+        style="fill: url(#circleGradient); paint-order: fill; stroke: rgb(103, 125, 30); stroke-width: 3px;" 
+        cx="50%" 
+        cy="50%" 
+        r="49%">
+    </circle>
+</svg>

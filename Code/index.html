@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAkACQAAD/4QBmRXhpZgAATU0AKgAAAAgABgESAAMAAAABAAEAAAMBAAUAAAABAAAAVgMDAAEAAAABAAAAAFEQAAEAAAABAQAAAFERAAQAAAABAAAWJVESAAQAAAABAAAWJQAAAAAAAYagAACxj//bAEMAAgEBAgEBAgICAgICAgIDBQMDAwMDBgQEAwUHBgcHBwYHBwgJCwkICAoIBwcKDQoKCwwMDAwHCQ4PDQwOCwwMDP/bAEMBAgICAwMDBgMDBgwIBwgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIACAAIAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP32VdlNA3HbmjG4fL0r5M/4Kvf8FXvBv/BKv4OWut6zajxH408QBm8MeGPNntP7f8i4tUu/9LS3mjt/JiuhL+9A37dq5J49DJ8mx2a42nl2XUnVrVHaMY6tv9EldttpJJttJNmc5xpxc5uyR6D+1r8e9Y+GHhaWPw7CFuFZTd6j5iAaZ+8h2L5ciESearMuV+51r4N/4JteHf2kI/8AgphrXiTUdcl8VeDfEjW//Cf68trpNl/aiQaVcx6eWt1PnQ7Jtkf7hV3FMvlSa7b/AIJR/Fa4+PmjWem+B7yHxH4Ct1KJqsai0XSlD3I8z7PIEmYSzQsu0j5evSv0P8C+BdJ+GfhOz0PQ7Y2el2G8QRec8pj3OXPzOSx+ZieTX8z8Dx47znijF5hxDGWFw1GbhCk00+aDcWuV2alB80asmrSu4pae79F4WeMWCxXBmIjQy5RrYmMqNT20Lyg01zWk0neE4pwcbR5kpSjzwaNtwW9tvavw2/4KIeNL7/gpJ/wXD8Sfse+JvFh0PTNO8qLwwXsBdR24l8OwavcnbEImbEtuv+tmJy3y8bkP7mshkmU/w9/evz9/4Icn9uwv8UP+G1DJs2aV/wAIeP8AiQf9Pn23/kE85/49P9d/wH+Kv6n4Y4mx2QY5ZllzSqJNRbSfLdW5o32kt016O6bT5cnzivltaVehGMnKMotSipK0k4vSSavZ7/J3Taf2D+zp+zj4M/ZF+Dej/Dv4eaKfD3g3w+bg6fp5vJ7z7P588tzJ+8uHeRsyyyPy5xnAwABXoKrg57njGKEX5f7xoJDLxXhYjE1cRVlXrycpybcpNtttu7bb1bb1berZ5cYqKstj/9k=">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>
+            Matrix Display Central Command!!
+        </title>
+
+        <link rel="stylesheet" href="site.css">
+        <style>
+            body {
+                background-color: #fff;
+            }
+            .mainHeaderContainer {
+                position: relative;
+            }
+            h4 {
+                margin-top: 16px;
+                font-weight: bolder;
+                font-family: sans-serif;
+            }
+            .mainHeaderContainer #timerFunctionSelect {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .pad {
+                position: relative;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .pad div {
+                width: 100%;
+                background-color: green;
+                display: block;
+                border: 1px solid black;
+                height: 100px;
+                width: 100%;
+                filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.5));
+            }
+            .pad span {
+                position: absolute;
+                float: left;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-weight: bold;  
+                font-size: 3em;
+                pointer-events: none;
+                filter: drop-shadow(2px 2px 2px rgba(255, 255, 255, 1));
+            }
+            .pressButton {
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container" style="margin-top: 10px">
+            <div class="row">
+                <div class="mainHeaderContainer">
+                    <h4>Timer:</h4>
+                    <select id="timerFunctionSelect">
+                        <option value="0" selected=selected>Elapsed</option>
+                        <option value="1">30 Seconds</option>
+                        <option value="2">1 Minute</option>
+                        <option value="3">2 Minute</option>
+                        <option value="4">3 Minute</option>
+                        <option value="5">5 Minute</option>
+                        <option value="6">10 Minute</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="four columns pad startTimerPad">
+                        <div style="background-color:rgb(113, 184, 63);"></div>
+                        <span>Start</span>
+                    </div>
+
+                    <div class="four columns pad stopTimerPad">
+                        <div style="background-color:rgb(191, 0, 0);"></div>
+                        <span>Stop</span>
+                    </div>
+
+                    <div class="four columns pad resetTimerPad">
+                        <div style="background-color:rgb(214, 214, 4);"></div>
+                        <span>Reset</span>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="row">
+                <h4>Score 1:</h4>
+
+                <div class="row">
+                    <div class="four columns pad incScore1Pad">
+                        <div style="background-color:rgb(113, 184, 63);"></div>
+                        <span>+1</span>
+                    </div>
+
+                    <div class="four columns pad decScore1Pad">
+                        <div style="background-color:rgb(191, 0, 0);"></div>
+                        <span>-1</span>
+                    </div>
+
+                    <div class="four columns pad resetScore1Pad">
+                        <div style="background-color:rgb(214, 214, 4);"></div>
+                        <span>Reset</span>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="row">
+                <h4>Score 2:</h4>
+
+                <div class="row">
+                    <div class="four columns pad incScore2Pad">
+                        <div style="background-color:rgb(113, 184, 63);"></div>
+                        <span>+1</span>
+                    </div>
+
+                    <div class="four columns pad decScore2Pad">
+                        <div style="background-color:rgb(191, 0, 0);"></div>
+                        <span>-1</span>
+                    </div>
+
+                    <div class="four columns pad resetScore2Pad">
+                        <div style="background-color:rgb(214, 214, 4);"></div>
+                        <span>Reset</span>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            
+            (function(window) {
+                
+                var xhr = new XMLHttpRequest();
+
+                window.onload = function() {
+
+                    var startTimerPad = document.querySelector(".startTimerPad");
+                    var stopTimerPad = document.querySelector(".stopTimerPad");
+                    var resetTimerPad = document.querySelector(".resetTimerPad");
+
+                    var incScore1Pad = document.querySelector(".incScore1Pad");
+                    var decScore1Pad = document.querySelector(".decScore1Pad");
+                    var resetScore1Pad = document.querySelector(".resetScore1Pad");
+                    
+                    var incScore2Pad = document.querySelector(".incScore2Pad");
+                    var decScore2Pad = document.querySelector(".decScore2Pad");
+                    var resetScore2Pad = document.querySelector(".resetScore2Pad");
+
+                    var timerFunction = document.getElementById("timerFunctionSelect");
+
+                    timerFunction.addEventListener(
+                        "change",
+                        function(e) {
+                            xhr.open('GET', '/api/settimer' + e.currentTarget.value);
+                            xhr.send(null);
+                        }
+                    )
+
+                    startTimerPad.addEventListener(
+                        "mouseup",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/starttimer');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    startTimerPad.addEventListener(
+                        "touchend",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/starttimer');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    stopTimerPad.addEventListener(
+                        "mouseup",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/stoptimer');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    stopTimerPad.addEventListener(
+                        "touchend",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/stoptimer');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    resetTimerPad.addEventListener(
+                        "mouseup",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/resettimer');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    resetTimerPad.addEventListener(
+                        "touchend",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/resettimer');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    incScore1Pad.addEventListener(
+                        "mouseup",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/incscore1');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    incScore1Pad.addEventListener(
+                        "touchend",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/incscore1');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    decScore1Pad.addEventListener(
+                        "mouseup",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/decscore1');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    decScore1Pad.addEventListener(
+                        "touchend",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/decscore1');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    resetScore1Pad.addEventListener(
+                        "mouseup",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/resetscore1');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    resetScore1Pad.addEventListener(
+                        "touchend",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/resetscore1');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    incScore2Pad.addEventListener(
+                        "mouseup",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/incscore2');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    incScore2Pad.addEventListener(
+                        "touchend",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/incscore2');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    decScore2Pad.addEventListener(
+                        "mouseup",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/decscore2');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    decScore2Pad.addEventListener(
+                        "touchend",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/decscore2');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    resetScore2Pad.addEventListener(
+                        "mouseup",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/resetscore2');
+                            xhr.send(null);
+                        },
+                        false);
+
+                    resetScore2Pad.addEventListener(
+                        "touchend",
+                        function(e) { 
+                            e.preventDefault();
+                            xhr.open('GET', '/api/resetscore2');
+                            xhr.send(null);
+                        },
+                        false);
+                }
+
+            })(window);
+
+        </script>
+    </body>
+</html>
